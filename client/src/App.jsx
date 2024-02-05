@@ -1,8 +1,9 @@
 function App() {
   return (
     <>
-      <div className="w-full h-screen bg-slate-900 text-red-600">Hello</div>
-      <div className="w-full h-screen bg-slate-900 text-red-600">World</div>
+      <div className="flex items-center justify-center w-full h-screen bg-slate-950">
+        <h1 className="text-yellow-500 text-3xl font-bold">PicTales</h1>
+      </div>
     </>
   );
 }
