@@ -15,7 +15,7 @@ Pictales is a photo-sharing platform that allows users to share their favorite m
 
 To get started with Pictales, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/alok-112/pictales-app.git`
+1. Clone the repository: `git clone https://github.com/alok-112/pictales.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 
