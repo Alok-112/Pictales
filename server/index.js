@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import router from './routes/posts.route.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -10,6 +11,12 @@ const app = express()
 app.use(bodyParser.json({ limit: "20mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }))
 app.use(cors())
+
+app.use('/', router)
+
+app.get('/test', (req, res) => {
+  res.send('Hello World!')
+})
 
 const CONNECTION_URL = process.env.MONGO_DB_URL;
 const PORT = process.env.PORT;
