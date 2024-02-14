@@ -37,6 +37,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Thanks to the open-source community for inspiration and valuable contributions.
 
----
-
-**Note:** This README is a template. Modify it according to your project's specific details and requirements.
