@@ -1,11 +1,25 @@
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./components/Home/Home"
+import Auth from "./components/Auth/Auth"
+
 function App() {
   return (
-    <>
-      <div className="flex items-center justify-center w-full h-screen bg-slate-950">
-        <h1 className="text-yellow-500 text-3xl font-bold">PicTales</h1>
+    <BrowserRouter>
+      <div
+        className="w-full h-screen px-10 py-4"
+      >
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+        </Routes>
       </div>
-    </>
-  );
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

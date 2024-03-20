@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
-import PostMessage from "../models/postMessage.js";
+import PostMessage from '../models/postMessage.js'
+
 export const getPosts = async (req, res) => {
     try {
         const postMessages = await PostMessage.find()
@@ -28,19 +29,18 @@ export const createPost = async (req, res) => {
 }
 
 export const deletePost = async (req, res) => {
-    // const postId = req.body.id
+    // const post = req.body;
 
     // try {
-    //     const post = await PostMessage.findById(postId)
+    //     const post = await PostMessage.findById(post.id);
+    //     if (!post) return res.status(404).json({ message: "Post not found" });
 
-    //     await post.deleteOne({
-    //         id: postId
-    //     })
-
-    //     res.status(200).json({ message: "Post deleted successfully" })
+    //     await post.remove();
+    //     res.status(200).json({ message: "Post deleted successfully" });
     // } catch (err) {
-    //     res.status(500).json({ message: err.message })
+    //     res.status(500).json({ message: err.message });
     // }
+
     const { id } = req.params
 
     if (!mongoose.Types.ObjectId.isValid(id))
